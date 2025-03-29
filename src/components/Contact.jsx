@@ -1,0 +1,72 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <motion.section
+      id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="bg-zinc-900 text-gray-300 py-16 px-8 md:px-20"
+    >
+      <h2 className="text-4xl font-bold text-white text-center mb-8">Contact Me</h2>
+      <div className="max-w-2xl mx-auto">
+        <form
+          action="https://formsubmit.co/el/hehedi"
+          method="POST"
+          className="flex flex-col gap-5 bg-zinc-800 p-6 rounded-xl shadow-lg"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+
+          <motion.input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+            required
+            className="p-3 bg-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-zinc-500 text-white"
+            whileFocus={{ scale: 1.02 }}
+          />
+          <motion.input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={form.email}
+            onChange={handleChange}
+            required
+            className="p-3 bg-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-zinc-500 text-white"
+            whileFocus={{ scale: 1.02 }}
+          />
+          <motion.textarea
+            name="message"
+            placeholder="Your Message"
+            value={form.message}
+            onChange={handleChange}
+            required
+            rows="5"
+            className="p-3 bg-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-zinc-500 text-white"
+            whileFocus={{ scale: 1.02 }}
+          />
+          <motion.button
+            type="submit"
+            className="bg-zinc-900 hover:bg-zinc-200 hover:text-zinc-800 text-white py-3 rounded-lg font-semibold shadow-md"
+            whileHover={{ scale: 1.05 }}
+          >
+            Send Message
+          </motion.button>
+        </form>
+      </div>
+    </motion.section>
+  );
+};
+
+export default Contact;
