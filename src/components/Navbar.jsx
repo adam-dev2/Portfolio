@@ -19,12 +19,12 @@ const Navbar = () => {
         <a href="#projects" className="hover:text-gray-500/50">Projects</a>
         <a href="#contact" className="hover:text-gray-500/50">Contact</a>
       </div>
-      <button onClick={mobileView} className="bg-zinc-900 md:hidden relative left-[50%] transform -translate-x-1/2 z-5 cursor-pointer" >
+      <button onClick={mobileView} className="bg-zinc-900/50 md:hidden relative left-[50%] transform -translate-x-1/2 z-5 cursor-pointer" >
         {isOpen ? <IoCloseOutline className="text-2xl text-white" /> : <CiMenuFries className="text-2xl text-white" />}
       </button>
     </nav>
     {isOpen && (
-  <div className="fixed inset-0 bg-black/50" onClick={mobileView}>
+  <div className="fixed inset-0 bg-zinc-900/50" onClick={mobileView}>
     <motion.div 
       initial={{ x: "100%" }} 
       animate={{ x: 0 }} 

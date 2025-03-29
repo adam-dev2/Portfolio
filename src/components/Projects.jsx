@@ -36,6 +36,7 @@ const projects = [
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
+      id="projects"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -63,7 +64,7 @@ const ProjectCard = ({ project }) => {
 
 const ProjectsGrid = () => {
   return (
-    <section className="bg-zinc-800 text-gray-300 py-16 px-8">
+    <section id="projects" className="bg-zinc-800 text-gray-300 py-16 px-8">
       <h2 className="text-4xl font-bold text-white text-center mb-12">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {projects.map((project, index) => (
