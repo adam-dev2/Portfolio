@@ -35,12 +35,12 @@ const Hero = () => {
         </motion.h1>
         <motion.h3 
           variants={itemVariants}
-          className="text-3xl font-semibold text-gray-300 mt-4 text-center">
-          I am a <span className="text-zinc-400/50 underline">Full-Stack</span> developer
+          className="text-3xl font-semibold text-gray-400 mt-4 text-center">
+          I am a <span className="text-white underline">Full-Stack</span> developer
         </motion.h3>
         <motion.p
           variants={itemVariants}
-          className="mt-4 text-lg text-gray-400 max-w-2xl text-center"
+          className="mt-4 text-lg text-gray-500 max-w-2xl text-center"
         >
         I am deeply passionate about transforming ideas into real-world solutions, developing scalable products, and tackling real-time challenges with innovative and efficient approaches
         </motion.p>

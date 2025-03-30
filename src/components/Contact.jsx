@@ -14,8 +14,8 @@ const Contact = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="bg-zinc-900 text-gray-300 py-16 px-8 md:px-20"
+      transition={{ duration: 0.8 }} 
+      className="bg-zinc-900 text-gray-300 py-16 px-8 md:px-20 scroll-mt-20"
     >
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         

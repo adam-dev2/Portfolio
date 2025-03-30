@@ -1,27 +1,21 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom"; // If using React Router
 
-const PreventBackstack = () => {
-  const location = useLocation(); // Get current URL path
-
+const PreventBackToSections = () => {
   useEffect(() => {
-    if (location.pathname !== "/") {
-      window.history.pushState(null, "", location.pathname); // Push new state
-    }
-
-    const handleBack = () => {
-      window.location.href = "#home"; // Redirect to home section
+    const handlePopState = () => {
+      if (window.location.hash !== "#home") {
+        window.location.href = "#home"; // Force back to home
+      }
     };
 
-    window.history.pushState(null, "", window.location.href); // Modify history
-    window.addEventListener("popstate", handleBack); // Listen for back
+    window.addEventListener("popstate", handlePopState);
 
     return () => {
-      window.removeEventListener("popstate", handleBack); // Cleanup
+      window.removeEventListener("popstate", handlePopState);
     };
-  }, [location]);
+  }, []);
 
   return null;
 };
 
-export default PreventBackstack;
+export default PreventBackToSections;

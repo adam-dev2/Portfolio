@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {motion} from 'motion/react'
 import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
+import PreventBackstack from "./PreventBackstack";
 
 const Navbar = () => {
   const [isOpen, setIsopen] = useState(false);

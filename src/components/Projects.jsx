@@ -4,6 +4,13 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Code Runner",
+    description: "Developed a C++ code Editor for C++ users with user friendly UI/UX no Registraion/Login required. The applicaiton follows Write & Run rule",
+    technologies: ["React.js", "Express.js", "Tailwind CSS","Socket.io","GCC"],
+    github: "https://github.com/adam-dev2/full-stack-code-editor-for-cpp-users",
+    demo: "https://ai-blog-demo.vercel.app"
+  },
+  {
     title: "Communicate",
     description: "A web-based real-time chat application with authentication and private messaging.",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB","Express.js"],
@@ -11,26 +18,19 @@ const projects = [
     demo: "https://chat-app-demo.vercel.app"
   },
   {
-    title: "Code Runner",
-    description: "Developed a C++ code Editor for C++ users with user friendly UI/UX no Registraion/Login required. The applicaiton follows Write & Run rule",
-    technologies: ["Next.js", "OpenAI API", "Tailwind CSS"],
-    github: "https://github.com/adam-dev2/full-stack-code-editor-for-cpp-users",
-    demo: "https://ai-blog-demo.vercel.app"
-  },
-  {
-    title: "Task Manager",
-    description: "Developed a todo application with Vanilla.js for frontend functionality.",
-    technologies: ["React", "Redux", "Express", "MongoDB"],
-    github: "https://github.com/adam-dev2/Task-Manager",
-    demo: "https://expense-tracker-demo.vercel.app"
-  },
-  {
     title: "Dev Portfolio",
     description: "A personal portfolio showcasing skills, projects, and contact information.",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/adam-dev2/Portfolio",
     demo: "https://yourportfolio.vercel.app"
-  }
+  },
+  {
+    title: "Task Manager",
+    description: "Developed a todo application with Vanilla.js for frontend functionality.",
+    technologies: ["React", "Express", "CSS", "MongoDB"],
+    github: "https://github.com/adam-dev2/Task-Manager",
+    demo: "https://expense-tracker-demo.vercel.app"
+  },
 ];
 
 const ProjectCard = ({ project }) => {
@@ -40,7 +40,7 @@ const ProjectCard = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }} 
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="bg-zinc-900/60 p-6 rounded-2xl shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105"
+      className="bg-zinc-900/60 p-6 rounded-2xl shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105 scroll-mt-20"
     >
       <h3 className="text-xl font-semibold text-zinc-300">{project.title}</h3>
       <p className="text-zinc-400 mt-2">{project.description}</p>
