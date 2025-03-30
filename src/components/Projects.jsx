@@ -38,7 +38,6 @@ const ProjectCard = ({ project }) => {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }} 
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="bg-zinc-900/60 p-6 rounded-2xl shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105 scroll-mt-20"
     >
@@ -62,7 +61,10 @@ const ProjectsGrid = () => {
   return (
     <section id="projects" className="bg-zinc-800 text-gray-300 py-16 px-8 items-center flex flex-col justify-center min-h-screen -z-10">
       <h2 className="text-7xl text-white font-extralight text-center mb-5 z-0">Projects</h2>
-      <div
+      <motion.div
+        initial={{ opacity: 0}}
+        whileInView={{ opacity: 1, }}
+        transition={{ duration: 0.8 }}
         className="bg-white/10 h-full py-10 backdrop-blur-xs rounded-4xl px-15 relative bottom-12 z-1"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -70,7 +72,7 @@ const ProjectsGrid = () => {
             <ProjectCard key={index} project={project} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
