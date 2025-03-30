@@ -2,11 +2,6 @@
 
 A sleek, modern portfolio showcasing my work, built with **React.js, Tailwind CSS, and Framer Motion**.
 
-
-![[1.png]]
-![[2.png]]
-![[3.png]]
-![[4.png]]
 ## ✨ Features
 
 - Dark-themed minimal UI
@@ -66,7 +61,7 @@ If you want to run the project locally, follow these steps:
 
 ## 🖼 Screenshot
 
-![Portfolio Preview](link-to-your-screenshot.png)
+![Portfolio Preview](Preview.png)
 
 ## 📬 Contact
 
