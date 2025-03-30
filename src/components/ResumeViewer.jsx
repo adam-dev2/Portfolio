@@ -13,7 +13,7 @@ export default function ResumeViewer() {
   return (
     <div>
       <button 
-        className="bg-zinc-900 mt-10 p-4 rounded-xl text-white cursor-pointer" 
+        className="bg-zinc-900 mt-10 p-4 rounded-xl text-white cursor-pointer hover:scale-[1.13] hover:text-zinc-400 transition-transform duration-300 shadow-lg"
         onClick={() => setIsOpen(true)}
       >
         Check Out My Resume
