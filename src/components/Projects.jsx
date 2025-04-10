@@ -8,28 +8,28 @@ const projects = [
     description: "Developed a C++ code Editor for C++ users with user friendly UI/UX no Registraion/Login required. The applicaiton follows Write & Run rule",
     technologies: ["React.js", "Express.js", "Tailwind CSS","Socket.io","GCC"],
     github: "https://github.com/adam-dev2/full-stack-code-editor-for-cpp-users",
-    demo: "https://ai-blog-demo.vercel.app"
+    demo: "https://coderunner-0in4.onrender.com/"
   },
   {
     title: "Communicate",
     description: "A web-based real-time chat application with authentication and private messaging.",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB","Express.js"],
     github: "https://github.com/shaikadam222/Real-Time-Chat-Application",
-    demo: "https://chat-app-demo.vercel.app"
+    demo: "https://github.com/shaikadam222/Real-Time-Chat-Application"
   },
   {
     title: "Dev Portfolio",
     description: "A personal portfolio showcasing skills, projects, and contact information.",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/adam-dev2/Portfolio",
-    demo: "https://yourportfolio.vercel.app"
+    demo: "https://portfolio-m36s.onrender.com/"
   },
   {
     title: "Task Manager",
     description: "Developed a todo application with Vanilla.js for frontend functionality.",
     technologies: ["React", "Express", "CSS", "MongoDB"],
     github: "https://github.com/adam-dev2/Task-Manager",
-    demo: "https://expense-tracker-demo.vercel.app"
+    demo: "https://github.com/adam-dev2/Task-Manager"
   },
 ];
 
@@ -51,6 +51,9 @@ const ProjectCard = ({ project }) => {
       <div className="mt-4 flex gap-4">
         <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:underline">
           <FaGithub /> GitHub
+        </a>
+        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:underline">
+          <FaExternalLinkAlt /> Live Demo
         </a>
       </div>
     </motion.div>
