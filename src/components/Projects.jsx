@@ -4,18 +4,25 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Code Runner",
+    title: "Second Brain",
+    description: "A full-stack platform to organize, tag, and manage important content from across the web in one place.",
+    technologies: ["React", "Express.js", "Tailwind CSS","Node.js", "MongoDB"],
+    github: "https://github.com/adam-dev2/Brainly",
+    demo: "https://github.com/adam-dev2/Brainly"
+  },
+  {
+    title: "Code Editor",
     description: "Developed a C++ code Editor for C++ users with user friendly UI/UX no Registraion/Login required. The applicaiton follows Write & Run rule",
     technologies: ["React.js", "Express.js", "Tailwind CSS","Socket.io","GCC"],
     github: "https://github.com/adam-dev2/full-stack-code-editor-for-cpp-users",
     demo: "https://coderunner-0in4.onrender.com/"
   },
   {
-    title: "Communicate",
-    description: "A web-based real-time chat application with authentication and private messaging.",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB","Express.js"],
-    github: "https://github.com/shaikadam222/Real-Time-Chat-Application",
-    demo: "https://github.com/shaikadam222/Real-Time-Chat-Application"
+    title: "Library Management System",
+    description: "Built an API which replicates real time library scenario.",
+    technologies: ["Node.js","Express.js","MongoDB","Mongoose","RESTful API","JWT Authentication",],
+    github: "https://github.com/adam-dev2/library-management-api",
+    demo: "https://github.com/adam-dev2/library-management-api"
   },
   {
     title: "Dev Portfolio",
@@ -23,13 +30,6 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/adam-dev2/Portfolio",
     demo: "https://portfolio-m36s.onrender.com/"
-  },
-  {
-    title: "Task Manager",
-    description: "Developed a todo application with Vanilla.js for frontend functionality.",
-    technologies: ["React", "Express", "CSS", "MongoDB"],
-    github: "https://github.com/adam-dev2/Task-Manager",
-    demo: "https://github.com/adam-dev2/Task-Manager"
   },
 ];
 
@@ -52,9 +52,9 @@ const ProjectCard = ({ project }) => {
         <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:underline">
           <FaGithub /> GitHub
         </a>
-        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:underline">
+        {/* <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:underline">
           <FaExternalLinkAlt /> Live Demo
-        </a>
+        </a> */}
       </div>
     </motion.div>
   );

@@ -1,4 +1,9 @@
 @import "tailwindcss";
+body {
+  overflow-x: hidden; 
+  overflow-y: auto;   
+}
+
 ::selection{
   background-color: rgb(252, 187, 67);
 }

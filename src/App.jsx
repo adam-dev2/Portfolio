@@ -9,7 +9,7 @@ import PreventBackstack from './components/PreventBackstack';
 const App = () => {
   const idx = 1;
   return (
-    <div className='w-screen bg-zinc-800'>
+    <div className='w-screen bg-zinc-800 overflow-hidden'>
       <Navbar />
       <Hero />
       <About />
